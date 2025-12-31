@@ -262,6 +262,8 @@ const Register = () => {
             className="bg-white rounded"
             required
                 />
+
+         <Link to ='/login' className='text-white black text-2xl'> Login </Link>
            
 
         </div>
