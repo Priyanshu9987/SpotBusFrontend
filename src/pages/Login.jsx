@@ -21,7 +21,7 @@ const Login = () => {
 
         try {
             // Login Checker
-             const response = await axios.post('http://localhost:5000/login', info);
+             const response = await axios.post('https://spotbus-backend.onrender.com/login', info);
 
              // Error checking Statements
         if(response != null) {
@@ -61,6 +61,7 @@ const Login = () => {
         />
                 <br />
                 <Link to='/passwordChange' className='text-white font-4xl font-bold'> Forgot Password ? </Link>
+                <Link to ='/register' className='text-white black text-2xl'> Register </Link>
             </div>
 
             {/* Login */}
