@@ -32,7 +32,7 @@ const Home = () => {
 
         <div className="w-full h-[750px] bg-green-300"
         onClick= {() => setPanelOpen(false)}>
-            <LocationPanel />
+            {/* <LocationPanel /> */}
             
 
         </div>

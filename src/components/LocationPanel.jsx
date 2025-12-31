@@ -49,7 +49,7 @@ function LiveTracking({ userId }) {
 
     return () => {
       navigator.geolocation.clearWatch(watchId);
-      // socket.disconnect();
+      socket.disconnect();
     };
   }, [userId]);
 
