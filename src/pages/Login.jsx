@@ -61,13 +61,18 @@ const Login = () => {
         />
                 <br />
                 <Link to='/passwordChange' className='text-white font-4xl font-bold'> Forgot Password ? </Link>
-                <Link to ='/register' className='text-white black text-2xl'> Register </Link>
+                <Link to ='/register' className='text-white black text-xl'> Register here</Link>
+                <br />
+
             </div>
 
             {/* Login */}
 
                 <button className=' w-9/10 center ml-5 mb-6 transform-translate-y-40  text-white p-2 font-bold text-2xl bg-linear-to-r from-indigo-400  via-yellow-500 to-green-500 rounded'
                 onClick={submitHandler}> Login</button>
+{/* Home Page */}
+                                <Link to = '/home' className='w-9/10 center ml-5 mb-6 transform-translate-y-40  text-white p-2 font-bold text-2xl bg-linear-to-r from-indigo-400  via-yellow-500 to-green-500 rounded'> Home Page</Link>
+
 
             </div>    
         </>
