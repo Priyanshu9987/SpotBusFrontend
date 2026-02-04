@@ -21,7 +21,7 @@ const Login = () => {
 
         try {
             // Login Checker
-             const response = await axios.post('https://spotbus-backend.onrender.com/login', info);
+             const response = await axios.post('https://spotbusbackend.onrender.com/login', info);
 
              // Error checking Statements
         if(response != null) {

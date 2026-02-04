@@ -55,7 +55,7 @@ const Register = () => {
         formData.append("certificate", certificateRef.current.files[0]);
 
         try {
-             const response = await axios.post('https://spotbus-backend.onrender.com/register', formData);
+             const response = await axios.post('https://spotbusbackend.onrender.com/register', formData);
              console.log(response.data);
 
              if(response != null)
