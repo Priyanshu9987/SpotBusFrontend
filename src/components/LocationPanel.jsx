@@ -15,7 +15,7 @@ const center = {
 };
 
 // Socket Connection Line
-const socket = io("https://spotbus-backend.onrender.com", {   // connect to backend
+const socket = io("https://spotbusbackend.onrender.com", {   // connect to backend
   transports: ["websocket", "polling"],
 });
 
