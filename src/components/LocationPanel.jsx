@@ -15,7 +15,9 @@ const center = {
 };
 
 // Socket Connection Line
-const socket = io(import.meta.env.SOCKET_ADDRESS); // connect to backend
+const socket = io("https://spotbus-backend.onrender.com", {   // connect to backend
+  transports: ["websocket", "polling"],
+});
 
 // Live Tracking Function
 function LiveTracking({ userId }) {
