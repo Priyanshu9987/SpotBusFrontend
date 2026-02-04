@@ -57,7 +57,7 @@ const Login = () => {
         )}
 
         <button
-          className="w-full text-white p-2 font-bold text-xl bg-gradient-to-r from-indigo-400 via-yellow-500 to-green-500 rounded mb-4"
+          className="w-full text-white p-2 font-bold text-xl bg-linear-to-r from-indigo-400 via-yellow-500 to-green-500 rounded mb-4"
           onClick={submitHandler}
         >
           Login
