@@ -12,6 +12,7 @@ const Register = () => {
     const [ plate, setPlate ] = useState('');
     const [ startingRoute, setStartingRoute ] = useState('');
     const [ endingRoute, setEndingRoute ] = useState('');
+    const [ errorMessage, setErrorMessage ] = useState('');
 
 // multipart/form-data Reference Variables.
     const driverRef = useRef(null);
@@ -57,13 +58,21 @@ const Register = () => {
              const response = await axios.post('https://spotbusbackend.onrender.com/register', formData);
              console.log(response.data);
 
-             if(response != null)
-                navigate('/');
+             if(response.status === 200){
+                // Succcessful Register
+                navigate("/home");// redirect to home page
+             }  else {
+                setErrorMessage('Registration gone wrong');
+             }
+                
 
         }catch(err) {
             console.log(" Error is in the sending details to the backend through the frontend.");
             console.error(err);
+            setErrorMessage("Error is at the time of the registration")
         }}
+
+
 
 // Reset Button Function
         const resetHandler = (e) => {
@@ -274,6 +283,9 @@ const Register = () => {
                type="submit">
                 Register
         </button>  
+        {errorMessage && (
+          <p className="text-red-500 mb-4">{errorMessage}</p>
+        )}
 
 {/* Reset Button */}
         <button className = 'w-full h-auto mt-5 mx-2 mb-4 p-3 text-green-800 font-bold text-2xl rounded  bg-linear-to-b from-orange-400 via-white to-green-600'
