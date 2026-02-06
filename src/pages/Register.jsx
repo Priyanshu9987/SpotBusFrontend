@@ -76,8 +76,7 @@ const Register = () => {
   };
 
   // Reset handler
-  const resetHandler = (e) => {
-    e.preventDefault();
+  const resetHandler = () => {
     formRef.current.reset();
     setName("");
     setEmail("");
@@ -97,8 +96,7 @@ const Register = () => {
           SpotBus App features.
         </h3>
 
-        {/* Inputs */}
-        {/* Example: Name */}
+        {/* Example input: Name */}
         <h2 className="text-white font-bold">Name</h2>
         <input
           type="text"
@@ -109,6 +107,15 @@ const Register = () => {
         />
 
         {/* Repeat for email, password, phone, plate, routes... */}
+        {/* Example: Email */}
+        <h2 className="text-white font-bold">Email</h2>
+        <input
+          type="email"
+          required
+          className="bg-white mb-2 p-2 rounded w-full"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
 
         {/* File inputs */}
         <h2 className="text-white font-bold">Bus Driver Photo</h2>
