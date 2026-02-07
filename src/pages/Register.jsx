@@ -276,6 +276,11 @@ const Register = () => {
 
         </div>
 
+                {errorMessage && (
+                <p className="text-red-500 mb-4">{errorMessage}</p>
+                )}
+
+
 {/* Register Button  */}
 
         <div className="h-auto w-full flex justify-center">
@@ -283,10 +288,7 @@ const Register = () => {
                type="submit" >
                 Register
         </button>  
-        {errorMessage && (
-          <p className="text-red-500 mb-4">{errorMessage}</p>
-        )}
-
+       
 {/* Reset Button */}
         <button className = 'w-full h-auto mt-5 mx-2 mb-4 p-3 text-green-800 font-bold text-2xl rounded  bg-linear-to-b from-orange-400 via-white to-green-600'
              onClick={resetHandler}
