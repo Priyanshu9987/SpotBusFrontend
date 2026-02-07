@@ -56,24 +56,27 @@ const Register = () => {
         formData.append("pu", puRef.current.files[0]);
         formData.append("certificate", certificateRef.current.files[0]);
 
-        try {
-             const response = axios.post("https://spotbusbackend.onrender.com/register", formData,
-                 { headers: { "Content-Type": "multipart/form-data" } }); 
-             console.log(response.data);
+    
 
-             if(response.status === 200){
-                // Succcessful Register
-                navigate("/home");// redirect to home page
-             }  else {
-                setErrorMessage('Registration gone wrong');
-             }
-                
+                    try {
+            const response = await axios.post(
+                "https://spotbusbackend.onrender.com/register",
+                formData,
+                { headers: { "Content-Type": "multipart/form-data" } }
+            );
 
-        }catch(err) {
-            console.log(" Error is in the sending details to the backend through the frontend.");
-            console.error(err);
-            setErrorMessage("Error is at the time of the registration")
-        }}
+            console.log(response.data);
+
+            if (response.status === 200) {
+                navigate("/home");
+            } else {
+                setErrorMessage("Registration gone wrong");
+            }
+            } catch (err) {
+            console.error("Error sending details:", err);
+            setErrorMessage("Error at the time of registration");
+            }
+
 
 
 
