@@ -64,7 +64,7 @@ const Register = () => {
              if (platePhotoRef.current?.files[0]) { formData.append("platePhoto", platePhotoRef.current.files[0]); }
              if (licenseRef.current?.files[0]) { formData.append("license", licenseRef.current.files[0]); }
              if (registrationRef.current?.files[0]) { formData.append("registration", registrationRef.current.files[0]); }
-             if (insuranceRef.current?.files[0]) { formData.append("insurace", insuranceRef.current.files[0]); }
+             if (insuranceRef.current?.files[0]) { formData.append("insurance", insuranceRef.current.files[0]); }
              if (puRef.current?.files[0]) { formData.append("pu", puRef.current.files[0]); }
              if (certificateRef.current?.files[0]) { formData.append("certificate", certificateRef.current.files[0]); }
 
