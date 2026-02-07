@@ -28,11 +28,13 @@ const Register = () => {
 
 // variables
     const navigate = useNavigate();
-    const formData = new FormData();
+   
 
 // Submit Checking Function
     const submitHandler = async (e) => {
         e.preventDefault();
+
+        const formData = new FormData();
 
 // textfiles attaching to the form-data
         formData.append("name", name);
