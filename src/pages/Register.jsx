@@ -56,9 +56,22 @@ const Register = () => {
         formData.append("pu", puRef.current.files[0]);
         formData.append("certificate", certificateRef.current.files[0]);
 
+        if (driverRef.current?.files[0]) {
+             formData.append("driver", driverRef.current.files[0]); }
+        
+             if (conductorRef.current?.files[0]) { formData.append("conductor", conductorRef.current.files[0]); }
+             if (busRef.current?.files[0]) { formData.append("bus", busRef.current.files[0]); }
+             if (platePhotoRef.current?.files[0]) { formData.append("platePhoto", platePhotoRef.current.files[0]); }
+             if (licenseRef.current?.files[0]) { formData.append("license", licenseRef.current.files[0]); }
+             if (registrationRef.current?.files[0]) { formData.append("registration", registrationRef.current.files[0]); }
+             if (insuranceRef.current?.files[0]) { formData.append("insurace", insuranceRef.current.files[0]); }
+             if (puRef.current?.files[0]) { formData.append("pu", puRef.current.files[0]); }
+             if (certificateRef.current?.files[0]) { formData.append("certificate", certificateRef.current.files[0]); }
+
     
 
                     try {
+                        
             const response = await axios.post(
                 "https://spotbusbackend.onrender.com/register",
                 formData,
@@ -77,7 +90,7 @@ const Register = () => {
             setErrorMessage("Error at the time of registration");
             }
 
-
+        }
 
 
 // Reset Button Function
@@ -310,6 +323,7 @@ const Register = () => {
 
         </>
      )}
+    
 
-export default Register;
+        export default Register;
 
